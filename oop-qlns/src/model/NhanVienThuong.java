@@ -1,9 +1,17 @@
 package model;
 
 public class NhanVienThuong extends NhanVien {
-
+    TruongPhong truongPhong;
     public NhanVienThuong() {
         setLuong1Ngay(100);
+    }
+
+    public TruongPhong getTruongPhong() {
+        return truongPhong;
+    }
+
+    public void setTruongPhong(TruongPhong truongPhong) {
+        this.truongPhong = truongPhong;
     }
 
     @Override
@@ -18,7 +26,7 @@ public class NhanVienThuong extends NhanVien {
                 ", hoTen='" + getHoTen() + '\'' +
                 ", soDienThoai=" + getSoDienThoai() +
                 ", soNgayLamViec=" + getSoNgayLamViec() +
-                ", luong1Ngay=" + getLuong1Ngay() + "Luong thang= " + luongThang() +
+                ", luong1Ngay=" + getLuong1Ngay() + ", Luong thang= " + luongThang() +
                 '}';
     }
 }

@@ -7,7 +7,25 @@ public class CongTy {
     private String tenCongTy;
     private String maSoThue;
     private double doanhThuThang;
+    private double loiNhuan;
     private List<NhanVien> nhanVienList = new LinkedList<>();
+
+    public CongTy() {
+    }
+
+    public CongTy(String tenCongTy, String maSoThue, double doanhThuThang) {
+        this.tenCongTy = tenCongTy;
+        this.maSoThue = maSoThue;
+        this.doanhThuThang = doanhThuThang;
+    }
+
+    public double getLoiNhuan() {
+        return loiNhuan;
+    }
+
+    public void setLoiNhuan(double loiNhuan) {
+        this.loiNhuan = loiNhuan;
+    }
 
     public String getTenCongTy() {
         return tenCongTy;

@@ -1,5 +1,6 @@
 package main;
 
+import com.sun.org.apache.xerces.internal.impl.dv.xs.SchemaDVFactoryImpl;
 import handle.CongTyHandler;
 
 import java.util.Scanner;
@@ -23,6 +24,7 @@ public class Main {
                     congTyHandler.nhapThongTin();
                     break;
                 case 2:
+                    congTyHandler.chiDinhNhanVienVaoTruongPhong();
                     break;
                 case 3:
                     congTyHandler.themXoaNhanSu();
@@ -37,7 +39,7 @@ public class Main {
                     congTyHandler.nhanVienThuongLuongCaoNhat();
                     break;
                 case 7:
-
+                    congTyHandler.truongPhongCoSoLuongNhanVienDuoiQuyenNhieuNhat();
                     break;
                 case 8:
                     congTyHandler.sapXepNhanVienTheoTen();
@@ -49,7 +51,7 @@ public class Main {
                     congTyHandler.giamDocCoLuongCoPhieuCaoNhat();
                     break;
                 case 11:
-                    congTyHandler.tongThuNhapCuaTungGIamDoc();
+                    congTyHandler.tongThuNhapCuaTungGiamDoc();
                     break;
                 default:
                     System.out.println("Nhập sai vui lòng nhập lại !");

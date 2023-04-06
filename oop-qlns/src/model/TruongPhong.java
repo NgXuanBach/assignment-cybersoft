@@ -6,32 +6,34 @@ import java.util.List;
 public class TruongPhong extends NhanVien {
     public TruongPhong(String maSo, String hoTen, int soDienThoai, int soNgayLamViec, double luong1Ngay) {
         super(maSo, hoTen, soDienThoai, soNgayLamViec, luong1Ngay);
-    }
-    public TruongPhong(){}
-    private List<NhanVienThuong> nhanVienDuoiQuyenList = new LinkedList<>();
-
-    public List<NhanVienThuong> getNhanVienDuoiQuyenList() {
-        return nhanVienDuoiQuyenList;
+        setLuong1Ngay(200);
     }
 
-    public void addNhanVienThuongList(NhanVienThuong nhanVienThuong) {
-        this.nhanVienDuoiQuyenList.add(nhanVienThuong);
+    private int soLuongNhanVienDuoiQuyen = 0;
+
+    public TruongPhong() {
     }
 
+    public int getSoLuongNhanVienDuoiQuyen() {
+        return soLuongNhanVienDuoiQuyen;
+    }
+
+    public void setSoLuongNhanVienDuoiQuyen(int soLuongNhanVienDuoiQuyen) {
+        this.soLuongNhanVienDuoiQuyen = soLuongNhanVienDuoiQuyen;
+    }
 
     @Override
     public double luongThang() {
-        return getLuong1Ngay() * getSoNgayLamViec() + 100 * nhanVienDuoiQuyenList.size();
+        return getLuong1Ngay() * getSoNgayLamViec() + 100 * soLuongNhanVienDuoiQuyen;
     }
 
     @Override
     public String toString() {
-        return "NhanVienThuong{" +
+        return "TruongPhong: " +
                 "maSo='" + getMaSo() + '\'' +
                 ", hoTen='" + getHoTen() + '\'' +
                 ", soDienThoai=" + getSoDienThoai() +
                 ", soNgayLamViec=" + getSoNgayLamViec() +
-                ", luong1Ngay=" + getLuong1Ngay() + "Luong thang= " + luongThang() + "So luong nhan vien duoi quyen" + nhanVienDuoiQuyenList.size() +
-                '}';
+                ", luong1Ngay=" + getLuong1Ngay() + "Luong thang= " + luongThang() + "So luong nhan vien duoi quyen= " + soLuongNhanVienDuoiQuyen;
     }
 }

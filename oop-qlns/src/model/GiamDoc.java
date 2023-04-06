@@ -7,6 +7,7 @@ public class GiamDoc extends NhanVien {
     public GiamDoc(String maSo, String hoTen, int soDienThoai, int soNgayLamViec, double luong1Ngay, int coPhan) {
         super(maSo, hoTen, soDienThoai, soNgayLamViec, luong1Ngay);
         this.coPhan = coPhan;
+        setLuong1Ngay(300);
     }
 
     public double getCoPhan() {
@@ -32,13 +33,12 @@ public class GiamDoc extends NhanVien {
 
     @Override
     public String toString() {
-        return "NhanVienThuong{" +
+        return "NhanVienThuong: " +
                 "maSo='" + getMaSo() + '\'' +
                 ", hoTen='" + getHoTen() + '\'' +
                 ", soDienThoai=" + getSoDienThoai() +
                 ", soNgayLamViec=" + getSoNgayLamViec() +
-                ", luong1Ngay=" + getLuong1Ngay() + "Luong thang= " + luongThang() + "Co phan= " + coPhan +
-                '}';
+                ", luong1Ngay=" + getLuong1Ngay() + ", Luong thang= " + luongThang() + ", Co phan= " + coPhan + ", Tong thu nhap= " + thuNhap;
     }
 
 }

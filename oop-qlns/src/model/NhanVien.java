@@ -6,7 +6,6 @@ public abstract class NhanVien {
     private int soDienThoai;
     private int soNgayLamViec;
     private double luong1Ngay;
-
     public NhanVien(String maSo, String hoTen, int soDienThoai, int soNgayLamViec, double luong1Ngay) {
         this.maSo = maSo;
         this.hoTen = hoTen;
